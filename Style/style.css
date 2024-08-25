@@ -10,11 +10,22 @@
 
 :root
 {
+    --background-color-transparent: rgba(39, 39, 39, 0.9);
     --background-color: #272727;
+    --red-background: #a90000;
+    --red-background-transparent: rgba(169, 0, 0, 0.6);
+
+
     --text-color: #d8d8d8;
     --title-font: PirataOne;
 
+    --blur-amount: 2rem;
+
     --default-font-size: 16px;
+
+
+
+    --navbar-height: 5rem;
 }
 
 /* Basic Styles */
@@ -26,11 +37,10 @@ html
 
 body
 {
-    background-color: var(--background-color);
     color: var(--text-color);
 
-    margin: 0;
     padding: 0;
+    margin: 0;
 
     height: 100%;
     width: 100%;
@@ -67,6 +77,14 @@ h1
 
     cursor: default;
     user-select: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--background-color);
+
+    z-index: -10;
 }
 
 .hero-section div
@@ -80,6 +98,7 @@ h1
     flex-direction: row;
     height: 100vh;
     width: 50vw;
+
 }
 
 .hero-logo
@@ -116,3 +135,49 @@ h1
     }
 }
 
+/* Main Section */
+
+main
+{
+    margin-top: 100vh;
+
+    background-color: var(--background-color-transparent);
+    backdrop-filter: blur(var(--blur-amount));
+
+    padding-bottom: 70vh;
+}
+
+
+/* Pirates of Fife Navbar */
+
+.pirates-of-fife-navbar
+{
+    background-color: var(--red-background-transparent);
+    backdrop-filter: blur(var(--blur-amount));
+    color: var(--text-color);
+
+    font-size: 120%;
+
+}
+
+.pirates-of-fife-navbar .nav-link
+{
+    color: var(--text-color);
+}
+
+.pirates-of-fife-navbar .nav-link.active
+{
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.pirates-of-fife-navbar .navbar-brand
+{
+    color: var(--text-color);
+}
+
+.pirates-of-fife-navbar .navbar-brand
+{
+    font-family: var(--title-font);
+    font-size: 130%;
+}
