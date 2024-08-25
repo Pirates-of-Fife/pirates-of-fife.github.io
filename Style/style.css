@@ -1,148 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE@0,300..800,27;1,300..800,27&display=swap');
+
 @font-face
 {
-    font-family: 'Pirate';
-    src: url('TheRumIsGone.ttf') format('embedded-opentype'), /* Internet Explorer */
-    url('TheRumIsGone.ttf') format('woff2'),             /* Super Modern Browsers */
-    url('TheRumIsGone.ttf') format('woff'),              /* Pretty Modern Browsers */
-    url('TheRumIsGone.ttf') format('truetype'),          /* Safari, Android, iOS */
-    url('TheRumIsGone.ttf') format('svg');               /* Legacy iOS */
+    font-family: PirataOne;
+    src: url("Fonts/Pirata One/PirataOne-Regular.ttf");
+}
+
+/* Variables */
+
+:root
+{
+    --background-color-transparent: rgba(39, 39, 39, 0.9);
+    --background-color: #272727;
+    --red-background: #a90000;
+    --red-background-transparent: rgba(169, 0, 0, 0.6);
+
+
+    --text-color: #d8d8d8;
+    --title-font: PirataOne;
+
+    --blur-amount: 2rem;
+
+    --default-font-size: 16px;
+
+
+
+    --navbar-height: 5rem;
+}
+
+/* Basic Styles */
+
+html
+{
+    font-size: var(--default-font-size);
 }
 
 body
 {
+    color: var(--text-color);
+
+    padding: 0;
     margin: 0;
-    background-color: #272727;
-    color: white;
-    font-family: "Fira Code", sans-serif;
+
+    height: 100%;
+    width: 100%;
+
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+            "BNCE" 3,
+            "INFM" 0,
+            "SPAC" 0;
 }
+
+h1
+{
+    font-family: var(--title-font);
+}
+
+/* Hero Section Classes */
+
+.hero-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+
+    cursor: default;
+    user-select: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--background-color);
+
+    z-index: -10;
+}
+
+.hero-section div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+
+    flex-direction: row;
+    height: 100vh;
+    width: 50vw;
+
+}
+
+.hero-logo
+{
+    width: 90%;
+    height: 90%;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)
+{
+    .hero-section
+    {
+        flex-direction: column;
+    }
+
+    .hero-section div
+    {
+        height: 50vh;
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .hero-section
+    {
+        flex-direction: column;
+    }
+
+    .hero-section div
+    {
+        height: 50vh;
+        width: 100vw;
+    }
+}
+
+/* Main Section */
 
 main
 {
     margin-top: 100vh;
+
+    background-color: var(--background-color-transparent);
+    backdrop-filter: blur(var(--blur-amount));
+
+    padding-bottom: 70vh;
 }
 
-h1,h2,h3
+
+/* Pirates of Fife Navbar */
+
+.pirates-of-fife-navbar
 {
-    line-height:1.2
+    background-color: var(--red-background-transparent);
+    backdrop-filter: blur(var(--blur-amount));
+    color: var(--text-color);
+
+    font-size: 120%;
+
 }
 
-
-.hero-section
+.pirates-of-fife-navbar .nav-link
 {
-    position: fixed;
-
-    height: 100vh;
-    width: 100vw;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    color: var(--text-color);
 }
 
-.hero-section img
+.pirates-of-fife-navbar .nav-link.active
 {
-    height: 40vh;
-    margin: auto;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
-.hero-title
+.pirates-of-fife-navbar .navbar-brand
 {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: Pirate, sans-serif;
-    font-size: 800%;
-
-    text-align: center;
-    width: 100%; /* Set a fixed width */
-    max-width: 100vw;
-    line-height: 1.5; /* Vertically center the text */
+    color: var(--text-color);
 }
 
-@media screen and (orientation: landscape)
+.pirates-of-fife-navbar .navbar-brand
 {
-    .hero-section
-    {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .hero-section img
-    {
-        height: 30rem;
-    }
-
-    .hero-title
-    {
-        font-size: 5rem;
-    }
-}
-
-@media screen and (orientation: portrait) and (max-width: 1000px)
-{
-    .hero-title
-    {
-        font-size: 500%;
-    }
-}
-
-@media screen and (orientation: portrait) and (max-width: 470px)
-{
-    .hero-title
-    {
-        font-size: 400%;
-    }
-}
-
-@media screen and (orientation: portrait) and (max-width: 470px)
-{
-    .hero-title
-    {
-        font-size: 300%;
-    }
-}
-
-nav
-{
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    backdrop-filter: blur(2rem);
-
-    position: sticky;
-
-    height: 4rem;
-
-    display: flex;
-}
-
-nav img
-{
-    height: 100%;
-    padding-left: 0.5rem;
-}
-
-nav ul
-{
-    padding: 0;
-    margin-left: auto;
-}
-
-nav li
-{
-    display: inline;
-    padding-right: 1rem;
-    justify-content: center;
-}
-
-nav li a
-{
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-family: var(--title-font);
+    font-size: 130%;
 }
