@@ -23,7 +23,7 @@
 
     --default-font-size: 16px;
 
-
+    --link-color: var(--red-background);
 
     --navbar-height: 5rem;
 }
@@ -33,6 +33,11 @@
 html
 {
     font-size: var(--default-font-size);
+}
+
+a
+{
+    color: var(--link-color);
 }
 
 body
@@ -58,6 +63,26 @@ body
 h1
 {
     font-family: var(--title-font);
+}
+
+.bg-red
+{
+    background-color: var(--red-background);
+}
+
+.bg-red-transparent
+{
+    background-color: var(--red-background-transparent);
+}
+
+.bg-dark
+{
+    background-color: var(--background-color);
+}
+
+.bg-dark-transparent
+{
+    background-color: var(--background-color-transparent);
 }
 
 /* Hero Section Classes */
@@ -87,61 +112,60 @@ h1
     z-index: -10;
 }
 
-.hero-section div
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 2rem;
-
-    flex-direction: row;
-    height: 100vh;
-    width: 50vw;
-
-}
-
-.hero-logo
-{
-    width: 90%;
-    height: 90%;
-}
-
-@media only screen and (min-width: 200px) and (max-width: 767px)
-{
-    .hero-section
-    {
-        flex-direction: column;
-    }
-
     .hero-section div
     {
-        height: 50vh;
-        width: 100vw;
-    }
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-@media only screen and (min-width: 768px) and (max-width: 1024px)
-{
-    .hero-section
-    {
-        flex-direction: column;
+        padding: 2rem;
+
+        flex-direction: row;
+        height: 100vh;
+        width: 50vw;
+
     }
 
-    .hero-section div
+    .hero-logo
     {
-        height: 50vh;
-        width: 100vw;
+        width: 90%;
+        height: 90%;
     }
-}
+
+    @media only screen and (min-width: 200px) and (max-width: 767px)
+    {
+        .hero-section
+        {
+            flex-direction: column;
+        }
+
+        .hero-section div
+        {
+            height: 50vh;
+            width: 100vw;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px)
+    {
+        .hero-section
+        {
+            flex-direction: column;
+        }
+
+        .hero-section div
+        {
+            height: 50vh;
+            width: 100vw;
+        }
+    }
 
 /* Main Section */
 
-main
+main.hero-page
 {
     margin-top: 100vh;
 
-    background-color: var(--background-color-transparent);
     backdrop-filter: blur(var(--blur-amount));
 
     padding-bottom: 70vh;
@@ -152,7 +176,6 @@ main
 
 .pirates-of-fife-navbar
 {
-    background-color: var(--red-background-transparent);
     backdrop-filter: blur(var(--blur-amount));
     color: var(--text-color);
 
