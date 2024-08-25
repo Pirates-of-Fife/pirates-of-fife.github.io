@@ -1,0 +1,148 @@
+@font-face
+{
+    font-family: 'Pirate';
+    src: url('TheRumIsGone.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('TheRumIsGone.ttf') format('woff2'),             /* Super Modern Browsers */
+    url('TheRumIsGone.ttf') format('woff'),              /* Pretty Modern Browsers */
+    url('TheRumIsGone.ttf') format('truetype'),          /* Safari, Android, iOS */
+    url('TheRumIsGone.ttf') format('svg');               /* Legacy iOS */
+}
+
+body
+{
+    margin: 0;
+    background-color: #272727;
+    color: white;
+    font-family: "Fira Code", sans-serif;
+}
+
+main
+{
+    margin-top: 100vh;
+}
+
+h1,h2,h3
+{
+    line-height:1.2
+}
+
+
+.hero-section
+{
+    position: fixed;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.hero-section img
+{
+    height: 40vh;
+    margin: auto;
+}
+
+.hero-title
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: Pirate, sans-serif;
+    font-size: 800%;
+
+    text-align: center;
+    width: 100%; /* Set a fixed width */
+    max-width: 100vw;
+    line-height: 1.5; /* Vertically center the text */
+}
+
+@media screen and (orientation: landscape)
+{
+    .hero-section
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .hero-section img
+    {
+        height: 30rem;
+    }
+
+    .hero-title
+    {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 1000px)
+{
+    .hero-title
+    {
+        font-size: 500%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 470px)
+{
+    .hero-title
+    {
+        font-size: 400%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 470px)
+{
+    .hero-title
+    {
+        font-size: 300%;
+    }
+}
+
+nav
+{
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    backdrop-filter: blur(2rem);
+
+    position: sticky;
+
+    height: 4rem;
+
+    display: flex;
+}
+
+nav img
+{
+    height: 100%;
+    padding-left: 0.5rem;
+}
+
+nav ul
+{
+    padding: 0;
+    margin-left: auto;
+}
+
+nav li
+{
+    display: inline;
+    padding-right: 1rem;
+    justify-content: center;
+}
+
+nav li a
+{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
