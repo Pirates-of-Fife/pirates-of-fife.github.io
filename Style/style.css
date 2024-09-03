@@ -290,13 +290,32 @@ main.hero-page
 
 .game-showcase
 {
-    rotate: 2deg;
     width: 105%;
     height: 20rem;
     position: relative;
     left: -1rem;
 
     margin-top: 10rem;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.game-showcase:hover
+{
+    scale: 102%;
+    transition: all 0.25s ease-in-out;
+}
+
+.rotate-2-deg
+{
+    rotate: 2deg;
+}
+
+.rotate-neg-2-deg
+{
+    rotate: -2deg;
 }
 
 .game-showcase .container
@@ -305,16 +324,50 @@ main.hero-page
     padding-left: 0;
     margin-right: 0;
     padding-right: 0;
+
+    justify-self: center;
+
 }
 
 .game-logo
 {
     height: 10rem;
-
+    transition: all 0.25s ease-in-out;
 }
+
+
+.game-logo:hover
+{
+    scale: 110%;
+
+    transition: all 0.25s ease-in-out;
+}
+
+.game-image
+{
+    height: 30rem;
+    transition: all 0.25s ease-in-out;
+
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-8rem);
+    float: right;
+}
+
+.game-image:hover
+{
+    scale: 110%;
+
+    transition: all 0.25s ease-in-out;
+}
+
 
 .bg-oddity-blue
 {
     background-color: var(--oddity-blue);
+}
 
+.bg-dusk-grey
+{
+    background-color: var(--dusk-grey);
 }
