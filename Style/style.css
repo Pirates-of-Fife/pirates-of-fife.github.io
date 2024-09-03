@@ -38,6 +38,17 @@
     --background-color-abyss-gradient-radial: radial-gradient(circle, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);;
     --background-color-abyss-gradient-linear: linear-gradient(38deg, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);
 
+    /* ODDITY colors */
+
+    --oddity-blue: #3f55ff;
+    --oddity-black: #272727;
+    --oddity-white: #f0f0f0;
+
+    /* Dusk colors */
+
+    --dusk-grey: #343434;
+    --dusk-white: #fff;
+
 }
 
 /* Basic Styles */
@@ -109,7 +120,11 @@ h1
     background-color: var(--background-color-transparent);
 }
 
-
+.main-title
+{
+    font-size: 10rem;
+    line-height: 9rem;
+}
 
 /* Hero Section Classes */
 
@@ -270,6 +285,7 @@ main.hero-page
     font-weight: bold;
     transition: 0.25s;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 }
 
@@ -303,5 +319,13 @@ main.hero-page
 .bg-oddity-blue
 {
     background-color: var(--oddity-blue);
+>>>>>>> Stashed changes
+=======
+}
+
+/* Index Page */
+.game-showcase
+{
+
 >>>>>>> Stashed changes
 }
