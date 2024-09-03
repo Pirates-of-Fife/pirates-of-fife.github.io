@@ -27,6 +27,14 @@
     --link-color: var(--red-background);
 
     --navbar-height: 5rem;
+
+    /* Abyss Theme */
+
+    --background-color-navbar-abyss: rgba(0, 5, 50, 0.6);
+    --background-color-abyss: #3158bb;
+    --background-color-abyss-gradient-radial: radial-gradient(circle, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);;
+    --background-color-abyss-gradient-linear: linear-gradient(38deg, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);
+
 }
 
 /* Basic Styles */
@@ -81,6 +89,8 @@ h1
 {
     background-color: var(--background-color-transparent);
 }
+
+
 
 /* Hero Section Classes */
 
@@ -200,4 +210,39 @@ main.hero-page
 {
     font-family: var(--title-font);
     font-size: 130%;
+}
+
+/* Abyss Theme */
+
+.bg-abyss
+{
+    background: var(--background-color-abyss);
+}
+
+.bg-abyss-gradient-linear
+{
+    background: var(--background-color-abyss-gradient-linear);
+    height: 100vh;
+}
+
+.bg-abyss-gradient-radial
+{
+    background: var(--background-color-abyss-gradient-radial);
+}
+
+.bg-abyss-navbar
+{
+    background: var(--background-color-navbar-abyss);
+}
+
+.abyss-link
+{
+    color: rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+.abyss-link:hover
+{
+    font-weight: bold;
+    transition: 0.25s;
 }
