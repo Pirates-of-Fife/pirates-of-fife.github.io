@@ -164,6 +164,7 @@ main.hero-page
     margin-top: 100vh;
 
     backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
 
     padding-bottom: 70vh;
 }
@@ -174,6 +175,8 @@ main.hero-page
 .pirates-of-fife-navbar
 {
     backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+
     color: var(--text-color);
 
     font-size: 120%;
