@@ -284,9 +284,6 @@ main.hero-page
 {
     font-weight: bold;
     transition: 0.25s;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 }
 
 /* Index Page */
@@ -319,13 +316,5 @@ main.hero-page
 .bg-oddity-blue
 {
     background-color: var(--oddity-blue);
->>>>>>> Stashed changes
-=======
-}
 
-/* Index Page */
-.game-showcase
-{
-
->>>>>>> Stashed changes
 }
