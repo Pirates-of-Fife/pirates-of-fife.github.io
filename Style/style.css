@@ -58,6 +58,11 @@ html
     font-size: var(--default-font-size);
 }
 
+body
+{
+    background-color: var(--background-color);
+}
+
 @media (max-width: 1000px)
 {
     html
@@ -98,6 +103,11 @@ body
 h1
 {
     font-family: var(--title-font);
+}
+
+.bg-fill
+{
+    height: 100vh;
 }
 
 .bg-red
@@ -291,11 +301,11 @@ main.hero-page
 .game-showcase
 {
     width: 105%;
-    height: 20rem;
+    height: 25rem;
     position: relative;
     left: -1rem;
 
-    margin-top: 10rem;
+    margin-top: 15rem;
 
     display: flex;
     align-items: center;
@@ -320,21 +330,37 @@ main.hero-page
 
 .game-showcase .container
 {
-    margin-left: 5rem;
     padding-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding-right: 0;
 
     justify-self: center;
 
 }
 
+.game-showcase .container a
+{
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
 .game-logo
 {
-    height: 10rem;
+    height: 12rem;
     transition: all 0.25s ease-in-out;
 }
 
+@media screen and (max-width: 573px)
+{
+    .game-showcase .container
+    {
+        margin-left: 2rem;
+    }
+}
 
 .game-logo:hover
 {
@@ -347,12 +373,10 @@ main.hero-page
 {
     height: 30rem;
     transition: all 0.25s ease-in-out;
-
-    position: absolute;
-    right: 6rem;
-    transform: translateY(-8rem);
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .game-image:hover
 {
