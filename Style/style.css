@@ -23,6 +23,9 @@
     --blur-amount: 2rem;
 
     --default-font-size: 16px;
+    --default-font-size-medium: 14px;
+    --default-font-size-small: 12px;
+
 
     --link-color: var(--red-background);
 
@@ -35,6 +38,17 @@
     --background-color-abyss-gradient-radial: radial-gradient(circle, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);;
     --background-color-abyss-gradient-linear: linear-gradient(38deg, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);
 
+    /* ODDITY colors */
+
+    --oddity-blue: #3f55ff;
+    --oddity-black: #272727;
+    --oddity-white: #f0f0f0;
+
+    /* Dusk colors */
+
+    --dusk-grey: #343434;
+    --dusk-white: #fff;
+
 }
 
 /* Basic Styles */
@@ -42,6 +56,27 @@
 html
 {
     font-size: var(--default-font-size);
+}
+
+body
+{
+    background-color: var(--background-color);
+}
+
+@media (max-width: 1000px)
+{
+    html
+    {
+        font-size: var(--default-font-size-medium);
+    }
+}
+
+@media (max-width: 600px)
+{
+    html
+    {
+        font-size: var(--default-font-size-small);
+    }
 }
 
 a
@@ -70,6 +105,11 @@ h1
     font-family: var(--title-font);
 }
 
+.bg-fill
+{
+    height: 100vh;
+}
+
 .bg-red
 {
     background-color: var(--red-background);
@@ -90,7 +130,11 @@ h1
     background-color: var(--background-color-transparent);
 }
 
-
+.main-title
+{
+    font-size: 10rem;
+    line-height: 9rem;
+}
 
 /* Hero Section Classes */
 
@@ -177,6 +221,8 @@ main.hero-page
     -webkit-backdrop-filter: blur(var(--blur-amount));
 
     padding-bottom: 70vh;
+
+    overflow: hidden;
 }
 
 
@@ -248,4 +294,131 @@ main.hero-page
 {
     font-weight: bold;
     transition: 0.25s;
+}
+
+/* Index Page */
+
+.game-showcase
+{
+    width: 105%;
+    height: 25rem;
+    position: relative;
+    left: -1rem;
+
+    margin-top: 15rem;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+}
+
+.game-showcase:hover
+{
+    scale: 102%;
+    transition: all 0.25s ease-in-out;
+}
+
+.rotate-2-deg
+{
+    rotate: 2deg;
+}
+
+.rotate-neg-2-deg
+{
+    rotate: -2deg;
+}
+
+.game-showcase .container
+{
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+
+    justify-self: center;
+
+}
+
+.game-showcase .container a
+{
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+.game-logo
+{
+    height: 12rem;
+    transition: all 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 573px)
+{
+    .game-showcase .container
+    {
+        margin-left: 2rem;
+    }
+}
+
+.game-logo:hover
+{
+    scale: 110%;
+
+    transition: all 0.25s ease-in-out;
+}
+
+.game-image
+{
+    height: 30rem;
+    transition: all 0.25s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.game-image:hover
+{
+    scale: 110%;
+
+    transition: all 0.25s ease-in-out;
+}
+
+
+.bg-oddity-blue
+{
+    background-color: var(--oddity-blue);
+}
+
+.bg-dusk-grey
+{
+    background-color: var(--dusk-grey);
+}
+
+
+/* New Contact Section Styling */
+.contact-card {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.contact-card h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(216,216,216,0.2);
+}
+
+.contact-card li:last-child {
+    border-bottom: none;
 }
