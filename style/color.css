@@ -17,6 +17,7 @@
 
     --color-dusk-gray: #343434; /* Dusk Gray */
     --color-abyssal-blue: #3F55FF; /* Abyssal Blue */
+    --color-scrapyard: #eccba2;
 
     /* === Abyss Theme*/
     --background-color-navbar-abyss: rgba(0, 5, 50, 0.6);
@@ -44,6 +45,11 @@
 .bg-dusk-gray
 {
     background-color: var(--color-dusk-gray);
+}
+
+.bg-scrapyard
+{
+    background-color: var(--color-scrapyard);
 }
 
 .bg-abyss-gradient-linear

@@ -247,7 +247,20 @@ header
     margin: 0;
 }
 
+.section
+{
+    margin-top: var(--space-xxl);
+    margin-left: var(--space-xxl);
+    margin-right: var(--space-xxl);
+}
 
+.big-title
+{
+    font-family: var(--display-font), system-ui;
+    font-size: 10rem;
+    line-height: 9rem;
+    text-align: center;
+}
 
 .hero
 {
@@ -294,17 +307,19 @@ header
 {
     justify-self: start;
     margin-left: var(--space-md);
-    height: calc(var(--font-size-hero-title) * 2 + var(--space-xl) * 2 );
+    height: calc(var(--font-size-hero-title) * 2.5 + var(--space-xl) * 1.2 );
 }
 
 .hero-img img
 {
-    height: calc(var(--font-size-hero-title) * 2 + var(--space-xl) * 2 );
+    height: calc(var(--font-size-hero-title) * 2.5 + var(--space-xl) * 2 );
 }
 
 .hero-title
 {
     font-size: var(--font-size-hero-title);
+
+    text-align: center;
 }
 
 @media screen and (max-width: 1160px)
