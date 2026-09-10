@@ -1,0 +1,97 @@
+:root
+{
+    /* === Neutral Colors === */
+    --color-gray-900: #272727; /* Gunpowder Gray */
+    --color-gray-300: #D8D8D8; /* Ash Gray */
+    --color-gray-100: #F0F0F0; /* Off White */
+    --color-white: #FFFFFF; /* White */
+
+    /* === Primary Colors === */
+    --color-red-500: #DB2727; /* Blood Red */
+
+    /* === Transparency === */
+    --color-red-500-35: rgba(219, 39, 39, 0.35);
+    --color-red-500-80: rgba(219, 39, 39, 0.80);
+
+    /* === Project Colors === */
+
+    --color-dusk-gray: #343434; /* Dusk Gray */
+    --color-abyssal-blue: #3F55FF; /* Abyssal Blue */
+
+    /* === Abyss Theme*/
+    --background-color-navbar-abyss: rgba(0, 5, 50, 0.6);
+    --background-color-abyss: #3158bb;
+    --background-color-abyss-gradient-radial: radial-gradient(circle, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);;
+    --background-color-abyss-gradient-linear: linear-gradient(38deg, rgba(40,85,144,1) 0%, rgba(46,86,178,1) 17%, rgba(53,86,214,1) 31%, rgba(57,72,211,1) 49%, rgba(48,55,129,1) 67%, rgba(44,48,96,1) 75%, rgba(40,41,54,1) 100%);
+}
+
+/* Background Colors */
+.bg-gray-900
+{
+    background-color: var(--color-gray-900);
+}
+
+.bg-red-500
+{
+    background-color: var(--color-red-500);
+}
+
+.bg-abyssal-blue
+{
+    background-color: var(--color-abyssal-blue);
+}
+
+.bg-dusk-gray
+{
+    background-color: var(--color-dusk-gray);
+}
+
+.bg-abyss-gradient-linear
+{
+    background: var(--background-color-abyss-gradient-linear);
+    height: 100vh;
+}
+
+.bg-abyss-navbar
+{
+    /*
+        Empty for a very good reason
+    */
+}
+
+.bg-abyss-navbar-mobile
+{
+    background: var(--background-color-navbar-abyss);
+}
+
+.bg-abyss-gradient-radial
+{
+    background: var(--background-color-abyss-gradient-radial);
+}
+
+.bg-transparent
+{
+    background: none;
+}
+
+/* Text colors*/
+
+.text-white
+{
+    color: var(--color-white);
+}
+
+.text-gray-100
+{
+    color: var(--color-gray-100);
+}
+
+.text-gray-300
+{
+    color: var(--color-gray-300);
+}
+
+.text-gray-900
+{
+    color: var(--color-gray-900);
+}
