@@ -1,89 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Pirates of Fife - Welcome Aboard</title>
-
-    <meta name="author" content="Pirates of Fife">
-    <meta name="keywords" content="Pirates of Fife, space pirates, Captain Zoe McFife, space adventure, game development, game design, indie, studio, game studio, game dev, dev, godot">
+    <title>Pirates of Fife</title>
+    <meta name="Author" content="Zoe McFife">
     <meta name="description" content="Pirates of Fife Homepage">
+    <meta property="og:image" content="/images/logo/Logo.svg">
 
-    <link rel="canonical" href="https://pirates-of-fife.space">
-    <link rel="icon" type="image/x-icon" href="Images/Logo/Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo/Favicon.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Style/style.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/main.css">
 </head>
+
 <body>
 
-<header class="hero-section">
-    <div>
-        <img class="hero-logo" src="Images/Logo/Logo.svg" alt="Logo">
-    </div>
-    <div>
-        <img class="hero-logo" src="Images/Logo/LogoTextWhite.svg" alt="Logo">
-    </div>
-</header>
+<a href="#main-content" class="skip-link">Skip Navigation</a>
+<header>
+    <nav class="navbar">
+        <div class="navbar-left navbar-slot">
+            <ul class="navbar-slot-list">
+                <li>
+                    <a href="index.html">
+                        <img class="navbar-logo" src="/images/logo/Logo.svg" alt="Pirates of Fife Logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="navbar-logo-text">Pirates of Fife</a>
+                </li>
+            </ul>
+        </div>
 
-<main class="hero-page bg-dark-transparent">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light pirates-of-fife-navbar bg-red-transparent">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="Images/Logo/Logo.svg" alt="Brand Logo" height="30px" width="30px" class="d-inline-block align-text-top">
-                Pirates of Fife
-            </a>
+        <div class="navbar-right navbar-slot">
+            <ul id="navbar-right-desktop" class="navbar-slot-list">
+                <li>
+                    <a href="pages/about.html">About</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">Contact</a>
+                </li>
+            </ul>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contact/Contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <ul id="navbar-right-mobile" class="navbar-slot-list">
+                <li>
+                    <button id="burger-icon-mobile-top" class="burger-icon">
+                        <img src="images/icons/icon-burger.svg" alt="burger">
+                    </button>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container pt-5">
-        <h1 class="main-title" id="Home">Welcome<br>Aboard</h1>
-
-        <h2 class="mt-3">We are the Pirates of Fife</h2>
-        <h2>A game development group based in Austria</h2>
-    </div>
-
-    <div class="game-showcase bg-oddity-blue rotate-2-deg">
-        <div class="container">
-            <a href="https://github.com/Pirates-of-Fife/oddity">
-                <img class="game-logo rotate-neg-2-deg" src="Images/Oddity/Oddity_Text_White.svg" alt="ODDITY">
+    <nav id="navbar-mobile" class="navbar-mobile collapsed" aria-hidden="true">
+        <div class="navbar-mobile-logo">
+            <a href="index.html">
+                <img class="navbar-logo" src="images/logo/Logo.svg" alt="Pirates of Fife Logo">
             </a>
-        </div>
-    </div>
 
-    <div class="game-showcase bg-dusk-grey rotate-neg-2-deg">
-        <div class="container">
-            <a href="https://github.com/Pirates-of-Fife/dusk">
-                <img class="game-logo rotate-2-deg" style="height: 15rem" src="Images/Dusk/Dusk%20Logo%20White.svg" alt="dusk">
+            <a href="index.html" class="navbar-logo-text">Zoe McFife</a>
+        </div>
+
+        <div class="navbar-mobile-links">
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+
+        <div class="navbar-mobile-burger-section">
+            <button id="burger-icon-mobile-bottom" class="burger-icon">
+                <img src="images/icons/icon-burger.svg" alt="burger">
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="hero">
+        <hgroup>
+            <h1 class="hero-title">Pirates<br>of<br>Fife</h1>
+        </hgroup>
+        <div class="hero-img">
+            <img src="images/logo/Logo.svg" alt="Logo">
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <hr>
+        <h1 class="big-title">Welcome<br>Aboard</h1>
+
+        <p class="text-align-center">Take a look around our ship and check out our games!</p>
+    </section>
+
+    <section class="projects">
+        <div class="project project-rotate-left">
+            <div class="project-header-bg bg-abyssal-blue">
+                <div class="project-header">
+                    <img src="images/projects/games/oddity/logo-oddity-text.svg" alt="ODDITY">
+                </div>
+            </div>
+            <div class="project-info-img">
+                <img src="images/projects/games/oddity/title-image.png" alt="Rearview picture of the Kestrel MK1 on Arka">
+            </div>
+
+            <div class="project-info-text">
+                <p class="project-info-description">
+                    ODDITY is a cozy space sim featuring modular starships, that you can upgrade and customize. Fight, Explore, Mine and Salvage in six star systems, seamlessly connected without loading screens.
+                </p>
+                <a href="https://pirates-of-fife.itch.io/oddity" class="project-info-view-project">
+                    Play Now
+                </a>
+            </div>
+        </div>
+
+        <div class="project project-rotate-right">
+            <div class="project-header-bg bg-dusk-gray">
+                <div class="project-header" id="dusk-header">
+                    <img src="images/projects/games/dusk/dusk-logo.svg" alt="DUSK">
+                </div>
+            </div>
+            <div class="project-info-img">
+                <img src="images/projects/games/dusk/dusk-project-image.png" alt="Dusk Main Island Port">
+            </div>
+
+            <div class="project-info-text">
+                <p class="project-info-description">
+                    Dusk is a  first-person atmospheric horror experience, where you collect maps and chart a course to unexplored islands.
+                </p>
+                <a href="https://pirates-of-fife.itch.io/dusk" class="project-info-view-project">
+                    Play Now
+                </a>
+            </div>
+        </div>
+
+        <div class="project project-rotate-left">
+            <div class="project-header-bg bg-scrapyard">
+                <div class="project-header text-gray-900">
+                    <h2>Scrapyard</h2>
+                </div>
+            </div>
+
+            <div class="project-info-img">
+                <img src="images/projects/games/scrapyard/scrapyard.png" alt="Scrapyard">
+            </div>
+
+            <div class="project-info-text">
+                <p class="project-info-description">
+                    Scrapyard is an Action / Adventure Hell Yeah simulator where you drive around in a big ass truck and shoot at things. Don't think and have fun!
+
+                    Also, you wanna get off this planet before you end up someone's soup bowl.
+                </p>
+                <a href="https://pirates-of-fife.itch.io/scrapyard" class="project-info-view-project">
+                    Play Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="badges">
+        <span class="badge">
+            <a href="https://pirates-of-fife.space/">
+                <img src="images/badges/zoe-mcfife.space.png" loading="lazy" height="31" width="88" alt="me" title="your local silly fox girl :3"/>
             </a>
-        </div>
-    </div>
+        </span>
 
-    <div class="container mt-5 pt-5">
-        <p style="text-align: center">Join our <a href="https://discord.gg/YSkWAMbcKQ">Discord!</a></p>
-    </div>
+        <span class="badge">
+            <a href="https://blerg.horse/">
+                <img src="images/badges/blerg.horse.png" loading="lazy" height="31" width="88" alt="blerg.horse" title="Derg Friend who is super cool and silly and derg"/>
+            </a>
+        </span>
 
+        <span class="badge">
+            <img src="images/badges/myowntwopaws.png" loading="lazy" height="31" width="88" alt="pawbs" title="Made with my own two freaking pawbs :3"/>
+        </span>
+
+        <span class="badge">
+            <a href="https://xenia.efi.pages.gay/" class="badge">
+                <img src="images/badges/xenianow.png" loading="lazy" height="31" width="88" alt="xenia" title="xenia is literally me omg <3"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://deltarune.com" class="badge">
+                <img src="images/badges/kriswheretfarewe.png" loading="lazy" height="31" width="88" alt="deltarune" title="Ralsei smokes a fat blunt with me every morning"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/noai.png" loading="lazy" height="31" width="88" alt="noai" title="fuck ai honestly that shit is squeebly"/>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/transrightsnow.png" loading="lazy" height="31" width="88" alt="trans" title="Trans rights are human rights!!!!!"/>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/seedyourtorrents.png" loading="lazy" height="31" width="88" alt="piracy" title="The pirate stuff isn't just for show y'know"/>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/kromernow.png" loading="lazy" height="31" width="88" alt="Kromer" title="[[HYPERLINK BLOCKED]]"/>
+        </span>
+
+        <span class="badge">
+            <iframe src="//incr.easrng.net/badge?key=zoemcfife" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+        </span>
+
+        <span class="badge">
+            <a href="https://www.blender.org/" class="badge">
+                <img src="images/badges/blender.png" loading="lazy" height="31" width="88" alt="bledner" title="I LOVE BLENDERING <3"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/lesbian.png" loading="lazy" height="31" width="88" alt="lesbo" title="OMG im so gay dkjsghsdkghlghsdhgsldghsdhlksdhs"/>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/trans.png" loading="lazy" height="31" width="88" alt="trans" title="im cuted with the pawbs woof woof"/>
+        </span>
+
+        <span class="badge">
+            <a href="https://trans.fish/" class="badge">
+                <img src="images/badges/flag-progress-trans-fish.png" loading="lazy" height="31" width="88" alt="gay" title="I cuddle my blahaj every day"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://https://xkcd.com/" class="badge">
+                <img src="images/badges/xkcd.png" loading="lazy" height="31" width="88" alt="XKCD" title="there's always one..."/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://www.youtube.com/@TomScottGo" class="badge">
+                <img src="images/badges/tom-scott.png" loading="lazy" height="31" width="88" alt="Tom Scott" title="WTF get out??????"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://www.youtube.com/@LinusTechTips" class="badge">
+                <img src="images/badges/free_tech_tips.png" loading="lazy" height="31" width="88" alt="LTT" title="A tech tip for everyone"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://mikeklubnika.com/logs/log_10" class="badge">
+                <img src="images/badges/youlikewebbuttonsdontyou.gif" loading="lazy" height="31" width="88" alt="buttons" title="girl kissing"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/fox-fox-fo.webp" loading="lazy" height="31" width="88" alt="fox" title="yip yap im a fox :3c"/>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/antinazi.4143352620.png" loading="lazy" height="31" width="88" alt="anti nazi" title="*fuck that shit!"/>
+        </span>
+
+        <span class="badge">
+            <a href="https://yesterweb.org/no-to-web3/" class="badge">
+                <img src="images/badges/noweb32.gif" loading="lazy" height="31" width="88" alt="no to web3"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://www.defectivebydesign.org/" class="badge">
+                <img src="images/badges/dbd.2333814563.webp" loading="lazy" height="31" width="88" alt="defective by design" title="DRM makes stuff worse"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://github.com/yt-dlp/yt-dlp" class="badge">
+                <img src="images/badges/yt-dl.4150620152.webp" loading="lazy" height="31" width="88" alt="ytdlp" title="Download more videos!!"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://archive.org/?noscript=true" class="badge">
+                <img src="images/badges/internetarchive.2540748731.png" loading="lazy" height="31" width="88" alt="Internet Archive" title="You should really support the internet archive!! its so cool11!!!"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://mikeklubnika.com/logs/log_10" class="badge">
+                <img src="images/badges/hell%20yeah.gif" loading="lazy" height="31" width="88" alt="hell yeah" title="*free bird starts playing*"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://ooo.eeeee.ooo/" class="badge">
+                <img src="images/badges/miku.2713284928.png" loading="lazy" height="31" width="88" alt="Miku" title="eats your wifi"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <a href="https://www.autisticasfxxk.com/" class="badge">
+                <img src="images/badges/autisticasfxxk.com.633732504.gif" loading="lazy" height="31" width="88" alt="autistic as fxxk" title="I should really get myself checked out lol"/>
+            </a>
+        </span>
+
+        <span class="badge">
+            <img src="images/badges/animegay.3420491898.webp" loading="lazy" height="31" width="88" alt="anime" title="gay anime woah... yuri... "/>
+        </span>
+
+    </section>
 </main>
 
 
+<footer>
+    <p>All pawbs reserved.</p>
+    <p>&copy; Zoe McFife 2026</p>
+    <ul>
+        <li>
+            <a href="pages/contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="https://github.com/ZoeMcFife">GitHub</a>
+        </li>
+        <li>
+            <a href="https://pirates-of-fife.space">Pirates of Fife</a>
+        </li>
+        <li>
+            <a href="https://discord.gg/YSkWAMbcKQ">Discord</a>
+        </li>
+    </ul>
+</footer>
 
+<script src="scripts/main.js"></script>
 
 </body>
+
 </html>
